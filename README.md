@@ -1,4 +1,4 @@
 # web-hw1
-فرشی سینیور فرانت دولوپر
-قلندری جونیور یو ای دیزاینر
-خلفی گل پسر
+- Mohammad Khalafi (99105418)
+- Alireza Farshi (99101976)
+- Abolfazl Ghalandary (99102026)
