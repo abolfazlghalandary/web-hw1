@@ -31,31 +31,29 @@
     integrity="sha384-6urqf2sgCGDfIXcoxTUOVIoQV+jFr/Zuc4O2wCRS6Rnd8w0OJ17C4Oo3PuXu8ZtF"
     crossorigin="anonymous"></script>
 
-
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
-
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/data.js"></script>
-
+<form class="ui form">
+  <div class="fields">
     <div class="field">
       <label>مبدا</label>
-      <select class="ui fluid dropdown">
-        <option value="">State</option>
-        <option value="AL">Alabama</option>
-        <option value="AK">Alaska</option>
+      <select id="from" class="ui fluid dropdown">
       </select>
     </div>
+    <div class="field">
+      <label>مقصد</label>
+      <select id="to" class="ui fluid dropdown">
+      </select>
+    </div>
+    <button class="ui button" type="submit">Submit</button>
   </div>
-  <button class="ui button" type="submit">Submit</button>
 </form>
 
 </body>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
 
 </html>
