@@ -18,9 +18,10 @@
   <link rel="apple-touch-icon" href="icon.png">
 
   <!--  custom stylesheets-->
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/numberInput.css">
-  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/numberInput.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/formStyle.css">
 
   <!--  font-awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -59,6 +60,12 @@
   <!--  jquery-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css?family=Cardo:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
+
+  <!--  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
+  <!--  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
 </head>
 
 
@@ -66,7 +73,7 @@
 <!--navigation bar-->
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-<!--  <a class="navbar-brand" href="#">خسرو</a>-->
+  <!--  <a class="navbar-brand" href="#">خسرو</a>-->
   <a class="navbar-brand" href="#">
     <img src="http://localhost:63342/web-hw1/logo.jpg" style="max-width: 90px;" alt="خسرو">
   </a>
@@ -119,7 +126,53 @@
   </div>
 </nav>
 
-
+<!--form-->
+<div id="booking" class="section">
+  <div class="section-center">
+    <div class="container">
+      <div class="row">
+        <div class="booking-form">
+          <form>
+            <div class="row">
+              <div class="form-group col-md-6">
+                <span class="form-label">مبدأ</span>
+                <select id="from" class="custom-select"></select>
+              </div>
+              <div class="col-md-6 form-group">
+                <span class="form-label">مقصد</span>
+                <select id="to" class="custom-select"></select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 form-group">
+                <span class="form-label">Departing</span>
+                <input class="form-control" type="date" required>
+              </div>
+              <div class="col-md-3 form-group">
+                <span class="form-label">Returning</span>
+                <input class="form-control" type="date" required>
+              </div>
+              <div class="col-md-2 form-group">
+                <span class="form-label">تعداد مسافران</span>
+                <input class="form-control" type="number" min="1" value="1" required>
+              </div>
+              <div class="col-md-3">
+                <div class="form-btn">
+                  <button class="submit-btn">Show flights</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
+
+<!--scripts-->
+<script src="../js/data.js"></script>
+<script src="../js/main.js"></script>
+
 </html>
