@@ -92,7 +92,6 @@
 </nav>
 
 <!--form-->
-
 <div id="booking" class="section">
   <div class="section-center">
     <div class="container">
@@ -100,29 +99,27 @@
         <div class="booking-form">
           <form>
             <div class="row">
-              <div class="form-group col-md-1">
+              <div class="form-group col-md-2 mb-8">
                 <span class="form-label">مبدأ</span>
-                <select id="from" class="custom-select"></select>
+                <select id="from" class="form-select form-select-lg"></select>
               </div>
-              <div class="form-group col-md-1">
+              <div class="form-group col-md-2">
                 <span class="form-label">مقصد</span>
-                <select id="to" class="custom-select"></select>
+                <select id="to" class="form-select form-select-lg" ></select>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3 form-group">
-                <span class="form-label">Departing</span>
+              <div class="col-md-2 form-group">
+                <span class="form-label">تاریخ رفت</span>
                 <input class="form-control" type="date" required>
               </div>
-              <div class="col-md-3 form-group">
-                <span class="form-label">Returning</span>
+              <div class="col-md-2 form-group">
+                <span class="form-label">تاریخ برگشت</span>
                 <input class="form-control" type="date" required>
               </div>
               <div class="col-md-2 form-group">
                 <span class="form-label">تعداد مسافران</span>
                 <input class="form-control" type="number" min="1" value="1" required>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-2">
                 <div class="form-btn">
                   <button class="submit-btn">Show flights</button>
                 </div>
