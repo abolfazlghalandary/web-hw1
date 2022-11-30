@@ -3,15 +3,6 @@
   height: 70vh;
 }
 
-.section {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 .section-center {
   width: 100%;
   position: absolute;
