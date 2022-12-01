@@ -1,0 +1,67 @@
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.footer.DescSection {
+  background: #020202;
+  color: #949494;
+}
+.DescSection {
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+
+.default-bg blockquote footer,
+.transparent-bg blockquote footer {
+  color: #cccccc;
+}
+
+footer .title{
+  color: white;
+}
+.title {
+  margin-top: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+blockquote {
+  border-left: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.space {
+  padding: 20px 0;
+}
+.pclear {
+  padding-bottom: 0;
+}
+.transparent-bg:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: #DB0A61;
+}
+
+.pink-bg{
+  color: #ffffff;
+  background-color: #DB0A61;
+}
+
+.secPadding{
+  padding: 70px 0;
+}
+.hero-caption{
+  text-align:center;
+  padding:40px 0;
+}

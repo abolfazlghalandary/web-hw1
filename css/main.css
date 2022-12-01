@@ -260,7 +260,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
-.cursor-pointer {
-  cursor: pointer;
-}
