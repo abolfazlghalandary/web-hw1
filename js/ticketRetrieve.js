@@ -16,3 +16,9 @@ for (let ticket of getAllTickets().filter(ticket =>
   ticket.remaining >= passengersCount)) {
   addToTickets(ticket)
 }
+
+document.querySelector("#source").innerText = sourceLocation
+document.querySelector("#destination").innerText = destination
+document.querySelector("#start").innerText = departDate
+document.querySelector("#end").innerText = returnDate
+document.querySelector("#passengers").innerText = passengersCount
