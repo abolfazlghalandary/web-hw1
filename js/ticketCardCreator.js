@@ -5,12 +5,12 @@ function addToTickets(ticketInfo) {
   clone.querySelector("#class").innerText = ticketInfo.flightClass
   clone.querySelector("#flightSource").innerText = ticketInfo.sourceLocation
   clone.querySelector("#flightTime").innerText = ticketInfo.flightTime
-  clone.querySelector("#sourceAirport").innerText = ticketInfo.flightClass
-  clone.querySelector("#duration").innerText = ticketInfo.flightClass
-  clone.querySelector("#flightDestination").innerText = ticketInfo.flightClass
-  clone.querySelector("#endTime").innerText = ticketInfo.flightClass
-  clone.querySelector("#destinationAirport").innerText = ticketInfo.flightClass
-  clone.querySelector("#price").innerText = ticketInfo.flightClass
+  clone.querySelector("#sourceAirport").innerText = ticketInfo.sourceAirport
+  clone.querySelector("#duration").innerText = ticketInfo.flightDuration
+  clone.querySelector("#flightDestination").innerText = ticketInfo.destination
+  clone.querySelector("#endTime").innerText = ticketInfo.endTime
+  clone.querySelector("#destinationAirport").innerText = ticketInfo.destinationAirport
+  clone.querySelector("#price").innerText = ticketInfo.price
   tickets.appendChild( clone );
 }
-addToTickets()
+
