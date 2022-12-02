@@ -1,0 +1,19 @@
+
+input[type="text"]::placeholder {
+  text-align: right;
+}
+h3{
+  text-align: right;
+}
+
+input[type="text"]{
+  direction: rtl;
+}
+input:focus::placeholder {
+  /*color: transparent;*/
+  font-size: .75em;
+  position: relative;
+  top: -15px;
+  transition: 0.2s ease-out;
+
+}
