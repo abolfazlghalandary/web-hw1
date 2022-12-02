@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="../css/numberInput.css">
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/formStyle.css">
-<!--  <link rel="stylesheet" href="../css/homeStyle.css">-->
+  <!--  <link rel="stylesheet" href="../css/homeStyle.css">-->
 
   <!--  font-awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -46,7 +46,7 @@
   <div class="container-fluid row">
     <img src="../img/logo.jpg" style="max-width: 90px;" alt="خسرو">
 
-    <div class="container">
+    <div class="container" style="max-width: 30em">
       <div class="row">
         <div class="col-4">
           <span id="source">تهران</span>
@@ -67,51 +67,59 @@
       </div>
     </div>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2"
-            aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="">ویرایش</span>
-      <img src="../img/search.svg" alt="search">
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent2">
-
-      <div class="container">
-        <div class="row">
-          <div class="booking-form">
-            <form>
+    <div class="accordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button align-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+            <span class="container">ویرایش</span>
+            <img src="../img/search.svg" alt="search">
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+             data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="container">
               <div class="row">
-                <div class="form-group col-md-2">
-                  <span class="form-label">مبدأ</span>
-                  <select id="from" class="form-select form-select-lg"></select>
-                </div>
-                <div class="form-group col-md-2">
-                  <span class="form-label">مقصد</span>
-                  <select id="to" class="form-select form-select-lg"></select>
-                </div>
-                <div class="col-md-2 form-group">
-                  <span class="form-label">تاریخ رفت</span>
-                  <span id="dtp1" class="cursor-pointer" data-mds-dtp-guid="166d60f0-7f3b-49be-bcf8-8f9361736d75"
-                        data-bs-original-title="" title="" data-mds-dtp-group="group1" data-from-date="true">
+                <div class="booking-form">
+                  <form>
+                    <div class="row">
+                      <div class="form-group col-md-2">
+                        <span class="form-label">مبدأ</span>
+                        <select id="from" class="form-select form-select-lg"></select>
+                      </div>
+                      <div class="form-group col-md-2">
+                        <span class="form-label">مقصد</span>
+                        <select id="to" class="form-select form-select-lg"></select>
+                      </div>
+                      <div class="col-md-2 form-group">
+                        <span class="form-label">تاریخ رفت</span>
+                        <span id="dtp1" class="cursor-pointer" data-mds-dtp-guid="166d60f0-7f3b-49be-bcf8-8f9361736d75"
+                              data-bs-original-title="" title="" data-mds-dtp-group="group1" data-from-date="true">
                   <input type="text" data-name="dtp1-text" class="form-control">
                 </span>
-                </div>
-                <div class="col-md-2 form-group">
-                  <span class="form-label">تاریخ برگشت</span>
-                  <span id="dtp2" class="cursor-pointer" data-mds-dtp-guid="f7ffbe01-5635-4f73-b722-b624dd83b61a"
-                        data-bs-original-title="" title="" data-mds-dtp-group="group1" data-to-date="true">
+                      </div>
+                      <div class="col-md-2 form-group">
+                        <span class="form-label">تاریخ برگشت</span>
+                        <span id="dtp2" class="cursor-pointer" data-mds-dtp-guid="f7ffbe01-5635-4f73-b722-b624dd83b61a"
+                              data-bs-original-title="" title="" data-mds-dtp-group="group1" data-to-date="true">
                   <input type="text" data-name="dtp2-text" class="form-control">
                 </span>
-                </div>
-                <div class="col-md-2 form-group">
-                  <span class="form-label">تعداد مسافران</span>
-                  <input class="form-control" type="number" min="1" value="1" required>
-                </div>
-                <div class="col-md-2">
-                  <div class="form-btn">
-                    <button class="submit-btn">جستجوی بلیط</button>
-                  </div>
+                      </div>
+                      <div class="col-md-2 form-group">
+                        <span class="form-label">تعداد مسافران</span>
+                        <input class="form-control" type="number" min="1" value="1" required>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="form-btn">
+                          <button class="submit-btn">جستجوی بلیط</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
