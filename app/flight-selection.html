@@ -70,7 +70,8 @@
     <div class="accordion">
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button align-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+          <button class="accordion-button align-content-center" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
                   aria-expanded="true" aria-controls="collapseOne">
             <span class="container">ویرایش</span>
             <img src="../img/search.svg" alt="search">
@@ -128,97 +129,40 @@
 </nav>
 
 <div id="tickets" class="container-fluid col text-center">
-  <div class="card">
-    <div class="row align-items-center">
-      <div class="col-sm-2">
-        <img src="../img/mahan.png" class="card-img-center" alt="Mahan logo">
-      </div>
-      <div class="col-sm-8 align-items-center">
-        <div class="card-body">
-          <div class="row">
-            <div class="col">
-              <h5 class="card-title">تهران</h5>
-            </div>
-            <div class="col">
-              <h4 class="card-title">10:00</h4>
-            </div>
-            <div class="col">
-              به
-            </div>
-            <div class="col">
-              <h5 class="card-title">مشهد</h5>
-            </div>
-            <div class="col">
-              <h4 class="card-title">12:00</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-2 d-sm-flex">
-        <a href="#" class="btn btn-primary">انتخاب پرواز</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="row align-items-center justify-content-center">
-      <div class="col-sm-2">
-        <img src="../img/mahan.png" class="card-img-center" alt="Mahan logo">
-      </div>
-      <div class="col-sm-8 align-items-center">
-        <div class="card-body">
-          <div class="row">
-            <div class="col">
-              <h5 class="card-title">تهران</h5>
-            </div>
-            <div class="col">
-              <h4 class="card-title">10:00</h4>
-            </div>
-            <div class="col">
-              به
-            </div>
-            <div class="col">
-              <h5 class="card-title">مشهد</h5>
-            </div>
-            <div class="col">
-              <h4 class="card-title">12:00</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-2 d-sm-flex">
-        <a href="#" class="btn btn-primary">انتخاب پرواز</a>
-      </div>
-    </div>
-
+  <div>
     <div class="card">
-      <div class="row align-items-center justify-content-center">
+      <div class="row align-items-center">
         <div class="col-sm-2">
-          <img src="../img/mahan.png" class="card-img-center" alt="Mahan logo">
+          <img src="../img/mahan.png" style="max-width: 3em" class="card-img-center" alt="Mahan logo">
+          <h6 id="class">اقتصادی</h6>
         </div>
-        <div class="col-sm-8 align-items-center">
+        <div class="col-sm-7 align-items-center">
           <div class="card-body">
             <div class="row">
               <div class="col">
-                <h5 class="card-title">تهران</h5>
+                <h5 id="flightSource" class="card-title">تهران</h5>
               </div>
               <div class="col">
-                <h4 class="card-title">10:00</h4>
+                <h4 id="flightTime" class="card-title">10:00</h4>
+                <h6 id="sourceAirport" class="card-title ">mehrabad</h6>
               </div>
               <div class="col">
-                به
+                >
+                <text id="duration">2h</text>
+                >
               </div>
               <div class="col">
-                <h5 class="card-title">مشهد</h5>
+                <h5 id="flightDestination" class="card-title">مشهد</h5>
               </div>
               <div class="col">
-                <h4 class="card-title">12:00</h4>
+                <h4 id="endTime" class="card-title">12:00</h4>
+                <h6 id="destinationAirport" class="card-title ">shahid</h6>
               </div>
             </div>
           </div>
         </div>
         <div class="col-sm-2 d-sm-flex">
-          <a href="#" class="btn btn-primary">انتخاب پرواز</a>
+          <a id="price" href="#" class="btn btn-primary">10,000,000 تومان</a>
         </div>
       </div>
     </div>
@@ -232,5 +176,6 @@
 <script src="../js/persianDatePicker/dtpDefiner.js"></script>
 <script src="../js/data.js"></script>
 <script src="../js/main.js"></script>
+<script src="../js/ticketRetrieve.js"></script>
 </body>
 </html>
