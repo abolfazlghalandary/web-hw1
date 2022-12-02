@@ -10,10 +10,22 @@ input[type="text"]{
   direction: rtl;
 }
 input:focus::placeholder {
-  /*color: transparent;*/
   font-size: .75em;
   position: relative;
   top: -15px;
   transition: 0.2s ease-out;
 
 }
+
+button{
+  text-align: right;
+ font-family: "B Nazanin";
+
+}
+
+button[id="addPassenger"]:hover{
+  background-color: #b3d4fc;
+}
+
+
+
