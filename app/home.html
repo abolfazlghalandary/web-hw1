@@ -92,36 +92,37 @@
   </div>
 </nav>
 <!--form-->
+<!--todo set default value for fields-->
 <div id="booking" class="section">
   <div class="section-center">
     <div class="container">
       <div class="row">
         <div class="booking-form">
-          <form>
+          <form action="flight-selection.html">
             <div class="row">
               <div class="form-group col-md-2">
                 <span class="form-label">مبدأ</span>
-                <select id="from" class="form-select form-select-lg"></select>
+                <select id="from" name="source" class="form-select form-select-lg"></select>
               </div>
               <div class="form-group col-md-2">
                 <span class="form-label">مقصد</span>
-                <select id="to" class="form-select form-select-lg" ></select>
+                <select id="to" name="destination" class="form-select form-select-lg" ></select>
               </div>
               <div class="col-md-2 form-group">
                 <span class="form-label">تاریخ رفت</span>
                 <span id="dtp1" class="cursor-pointer" data-mds-dtp-guid="166d60f0-7f3b-49be-bcf8-8f9361736d75" data-bs-original-title="" title="" data-mds-dtp-group="group1" data-from-date="true">
-                  <input type="text" data-name="dtp1-text" class="form-control">
+                  <input type="text" name="departDate" data-name="dtp1-text" class="form-control">
                 </span>
               </div>
               <div class="col-md-2 form-group">
                 <span class="form-label">تاریخ برگشت</span>
                 <span id="dtp2" class="cursor-pointer" data-mds-dtp-guid="f7ffbe01-5635-4f73-b722-b624dd83b61a" data-bs-original-title="" title="" data-mds-dtp-group="group1" data-to-date="true">
-                  <input type="text" data-name="dtp2-text" class="form-control">
+                  <input type="text" name="returnDate" data-name="dtp2-text" class="form-control">
                 </span>
               </div>
               <div class="col-md-2 form-group">
                 <span class="form-label">تعداد مسافران</span>
-                <input class="form-control" type="number" min="1" value="1" required>
+                <input class="form-control" name="passengers" type="number" min="1" value="1" required>
               </div>
               <div class="col-md-2">
                 <div class="form-btn">

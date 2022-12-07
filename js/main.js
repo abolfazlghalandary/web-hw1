@@ -12,3 +12,7 @@ function addOptionsToSelectElement(options, element){
     element.appendChild(opt);
   }
 }
+
+function searchTickets(){
+  window.location = "flight-selection.html"
+}
