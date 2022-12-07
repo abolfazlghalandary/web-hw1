@@ -1,13 +1,5 @@
-const params = new Proxy(new URLSearchParams(window.location.search), {
-  get: (searchParams, prop) => searchParams.get(prop),
-});
-
-let sourceLocation = params.source
-let destination = params.destination
-let departDate = params.departDate
-let returnDate = params.returnDate
-let passengersCount = params.passengers
-
+const airports = ["مهرآباد", "سردار", "پیام", "آزادی", "سرآمد", "انقلاب"];
+const flightClass = ["کلاس بالا", "تجاری", "اقتصادی"];
 
 function SetSearchInfoHeader() {
   document.querySelector("#source").innerText = sourceLocation
@@ -25,15 +17,63 @@ function SetDefaultSearchFields() {
   document.querySelector("#passengersCount").value = passengersCount
 }
 
-for (let ticket of getAllTickets().filter(ticket =>
-  ticket.sourceLocation === sourceLocation &&
-  ticket.destination === destination &&
-  ticket.departDate === departDate &&
-  ticket.returnDate === returnDate &&
-  ticket.remaining >= passengersCount)) {
-  addToTickets(ticket)
+function getFilteredTickets() {
+  return getAllTickets().filter(ticket =>
+    ticket.sourceLocation === sourceLocation &&
+    ticket.destination === destination &&
+    ticket.departDate === departDate &&
+    ticket.returnDate === returnDate &&
+    ticket.remaining >= passengersCount);
 }
 
+function GetRandomFrom(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
+
+function GenerateRandomTicket() {
+  let flightTime = Math.floor(Math.random() * 24);
+  let endTime = Math.floor(Math.random() * 24);
+  let duration = endTime - flightTime;
+  if (duration <= 0) duration = 24 + duration;
+  let sourceAirport = GetRandomFrom(airports);
+  let destinationAirport = GetRandomFrom(airports.filter(a => a !== sourceAirport));
+  return {
+    sourceLocation: sourceLocation,
+    sourceAirport: sourceAirport,
+    destination: destination,
+    destinationAirport: destinationAirport,
+    departDate: departDate,
+    flightTime: flightTime + ":00",
+    returnDate: returnDate,
+    flightDuration: duration + "h",
+    endTime: endTime + ":00",
+    flightClass: GetRandomFrom(flightClass),
+    price: Math.floor(Math.random() * 30) + ",000,000" + " تومان",
+    remaining: Math.floor(Math.random() * 100)
+  };
+}
+
+function GenerateRandomTickets() {
+  let tickets = [];
+  for (let i = 0; i < Math.floor(Math.random() * 11) + 1; i++) {
+    tickets.push(GenerateRandomTicket());
+  }
+  return tickets;
+}
+
+const params = new Proxy(new URLSearchParams(window.location.search), {
+  get: (searchParams, prop) => searchParams.get(prop),
+});
+
+let sourceLocation = params.source
+let destination = params.destination
+let departDate = params.departDate
+let returnDate = params.returnDate
+let passengersCount = params.passengers
+
+for (let ticket of GenerateRandomTickets().filter(ticket => ticket.remaining >= passengersCount)/*getFilteredTickets()*/) {
+  addToTickets(ticket)
+}
 SetSearchInfoHeader();
 SetDefaultSearchFields();
 
