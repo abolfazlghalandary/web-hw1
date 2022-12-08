@@ -9,7 +9,13 @@ function addToTickets(ticketInfo) {
   clone.querySelector("#duration").innerText = ticketInfo.flightDuration
   clone.querySelector("#flightDestination").innerText = ticketInfo.destination
   clone.querySelector("#endTime").innerText = ticketInfo.endTime
-  clone.querySelector("#destinationAirport").innerText = ticketInfo.destinationAirport
-  clone.querySelector("#price").innerText = ticketInfo.price
+  clone.querySelector("#destinationAirport").innerText = ticketInfo.destinationAirport;
+  let priceElement = clone.querySelector("#price");
+  priceElement.innerText = ticketInfo.price
+  priceElement.addEventListener("click", function() {
+    let json = JSON.stringify({ticketInfo});
+    sessionStorage.setItem("buyingTicket", json);
+    window.location.href = "/purchase.html";
+  });
   tickets.appendChild( clone );
 }
