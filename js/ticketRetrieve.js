@@ -72,7 +72,8 @@ let returnDate = params.returnDate
 let passengersCount = params.passengers
 
 for (let ticket of GenerateRandomTickets().filter(ticket => ticket.remaining >= passengersCount)/*getFilteredTickets()*/) {
-  addToTickets(ticket)
+  let limited = passengersCount * 3 >= ticket.remaining;
+  addToTickets(ticket, limited)
 }
 SetSearchInfoHeader();
 SetDefaultSearchFields();
