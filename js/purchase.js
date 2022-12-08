@@ -5,3 +5,5 @@ function duplicate(){
   passengerSection.appendChild(copy);
 
 }
+
+console.log(sessionStorage.getItem("buyingTicket"));
