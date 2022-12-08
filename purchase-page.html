@@ -19,8 +19,8 @@
     <h3> مشخصات مسافران</h3>
 
   </div>
-
-  <div class="row">
+<div class="container" id="passengerSection">
+  <div class="row" id="duplicater">
     <div class="col">
       <input type="text" class="form-control" placeholder="شماره پاسپورت" aria-label="First name"/>
     </div>
@@ -31,8 +31,9 @@
       <input type="text" class="form-control" placeholder="نام" aria-label="Last name">
     </div>
   </div>
+</div>
   <div class="mt-5">
-    <button type="button" id="addPassenger" class="btn btn-outline-primary border border-primary fw-bold">اضافه کردن مسافر جدید +</button>
+    <button type="button" id="addPassenger" onclick="duplicate()" class="btn btn-outline-primary border border-primary fw-bold">اضافه کردن مسافر جدید +</button>
   </div>
 </section>
 
@@ -46,6 +47,8 @@
         crossorigin="anonymous">
 
 </script>
+
+<script src="js/duplicator.js"></script>
 
 </body>
 </html>
