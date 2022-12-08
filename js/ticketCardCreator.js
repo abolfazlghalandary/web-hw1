@@ -1,7 +1,7 @@
 let tickets = document.getElementById("tickets");
-let ticketTemplate = document.querySelector('#ticketTemplate');
+let ticketTemplate = document.getElementsByTagName("template")[0];//document.querySelector('#ticketTemplate');
 function addToTickets(ticketInfo) {
-  let clone = ticketTemplate.cloneNode( true );
+  let clone = ticketTemplate.content.cloneNode( true );
   clone.querySelector("#class").innerText = ticketInfo.flightClass
   clone.querySelector("#flightSource").innerText = ticketInfo.sourceLocation
   clone.querySelector("#flightTime").innerText = ticketInfo.flightTime
@@ -13,4 +13,3 @@ function addToTickets(ticketInfo) {
   clone.querySelector("#price").innerText = ticketInfo.price
   tickets.appendChild( clone );
 }
-
