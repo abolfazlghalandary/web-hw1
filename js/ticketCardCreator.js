@@ -1,5 +1,5 @@
 let tickets = document.getElementById("tickets");
-let ticketTemplate = document.getElementsByTagName("template")[0];//document.querySelector('#ticketTemplate');
+let ticketTemplate = document.getElementsByTagName("template")[0];
 function addToTickets(ticketInfo) {
   let clone = ticketTemplate.content.cloneNode( true );
   clone.querySelector("#class").innerText = ticketInfo.flightClass

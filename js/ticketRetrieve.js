@@ -48,7 +48,7 @@ function GenerateRandomTicket() {
     flightDuration: duration + "h",
     endTime: endTime + ":00",
     flightClass: GetRandomFrom(flightClass),
-    price: Math.floor(Math.random() * 30) + ",000,000" + " تومان",
+    price: (Math.floor(Math.random() * 30) + 1) + ",000,000" + " تومان",
     remaining: Math.floor(Math.random() * 100)
   };
 }
