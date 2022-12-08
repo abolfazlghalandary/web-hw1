@@ -4,11 +4,10 @@ input[type="text"]{
 input[type="password"]{
   direction: rtl;
 }
+input[type="email"]{
+  direction: rtl;
+}
 
 input:focus::placeholder {
   color: transparent;
-}
-
-body {
-  background-image: url('../img/login.jpg');
 }
