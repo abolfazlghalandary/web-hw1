@@ -1,0 +1,10 @@
+input[type="text"]{
+  direction: rtl;
+}
+input[type="password"]{
+  direction: rtl;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
