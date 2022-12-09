@@ -26,14 +26,30 @@ function saveInformation(){
       i = i + 1;
     }
   }
-
-  for(let j = 0; j < i; i ++){
+  let startTime = document.getElementById('startTime').innerText;
+  let endTime = document.getElementById('endTime').innerText;
+  let source = document.getElementById('source').innerText;
+  let destination = document.getElementById('destination').innerText;
+  let passengerList = [];
+  for(let j = 0; j < i; j++){
     let passenger = document.getElementById('passenger_'+ j);
-    let passportNumber = passenger.querySelector("#passportNumber").innerText;
-    let lastName = passenger.querySelector("#lastName").innerText;
-    let firstName = passenger.querySelector("#firstName").innerText;
-
+    let passportNumber = passenger.querySelector("#passportNumber").value;
+    let lastName = passenger.querySelector("#lastName").value;
+    let firstName = passenger.querySelector("#firstName").value;
+    let informationOfPassenger = {
+      lastname : lastName,
+      firstName : firstName,
+      passportNumber : passportNumber,
+      startTime : startTime,
+      endTime: endTime,
+      source : source,
+      destination : destination
+    };
+    passengerList.push(informationOfPassenger);
   }
+  let json = JSON.stringify(passengerList);
+  console.log(json)
+  localStorage.setItem("passengerInfos",json);
 
 
 
