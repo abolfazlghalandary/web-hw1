@@ -10,8 +10,8 @@ function SetSearchInfoHeader() {
 }
 
 function SetDefaultSearchFields() {
-  document.querySelector("#from").value = sourceLocation
-  document.querySelector("#to").value = destination
+  document.querySelector("#fromCities").value = sourceLocation
+  document.querySelector("#toCities").value = destination
   document.querySelector("#dtp1Val").value = departDate
   document.querySelector("#dtp2Val").value = returnDate
   document.querySelector("#passengersCount").value = passengersCount

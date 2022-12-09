@@ -1,43 +1,16 @@
-
-input[type="text"]::placeholder {
-  text-align: right;
-}
-h3{
-  text-align: right;
-}
-
-input[type="text"]{
-  direction: rtl;
-}
 input:focus::placeholder {
   font-size: .75em;
   position: relative;
   top: -15px;
   transition: 0.2s ease-out;
-
 }
 
-button{
+button {
   text-align: right;
- font-family: "B Nazanin";
-
+  font-family: "B Nazanin";
 }
 
-button[id="addPassenger"]:hover{
+button[id="addPassenger"]:hover {
   background-color: #b3d4fc;
 }
-
-div[id="endTime"]{
-  direction: rtl;
-}
-div[id="startTime"]{
-  direction: rtl;
-}
-div[id="destination"]{
-  direction: rtl;
-}
-div[id="source"]{
-  direction: rtl;
-}
-
 
