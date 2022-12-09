@@ -50,10 +50,6 @@ function saveInformation(){
   let json = JSON.stringify(passengerList);
   console.log(json)
   localStorage.setItem("passengerInfos",json);
-
-
-
-
 }
 
 let x = sessionStorage.getItem("buyingTicket");
