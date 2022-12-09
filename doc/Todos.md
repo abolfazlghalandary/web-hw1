@@ -16,6 +16,9 @@
 
 ![img_7.png](img_7.png) ✔
 
+## bugs
+
+![img_15.png](img_15.png)
 ---
 
 # صفحە ی خرید
