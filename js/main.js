@@ -1,12 +1,12 @@
-let fromElement = document.getElementById("from");
-let toElement = document.getElementById("to");
+let fromDataList = document.getElementById("fromCities");
+let toDataList = document.getElementById("toCities");
 let locations = getLocations();
 
-addOptionsToSelectElement(locations, fromElement);
-addOptionsToSelectElement(locations, toElement);
+addOptionsToElement(locations, fromDataList);
+addOptionsToElement(locations, toDataList);
 
-function addOptionsToSelectElement(options, element){
-  for (let option of options){
+function addOptionsToElement(optionContents, element){
+  for (let option of optionContents){
     let opt = document.createElement('option');
     opt.innerHTML = option;
     element.appendChild(opt);
