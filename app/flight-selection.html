@@ -8,7 +8,6 @@
         integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
 
   <title>خرید بلیط - خسرو</title>
-
   <link href="../img/Khosro-dark.png" rel="icon">
 
   <!--  custom stylesheets-->
@@ -23,12 +22,17 @@
   <!--  bootstrap-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="../css/select2.min.css" rel="stylesheet" />
 
   <!--  persian datepicker-->
   <link href="../css/persianDatePicker/mds.bs.datetimepicker.style.css" rel="stylesheet"/>
 
   <!--  jquery-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"></script>
+  <script src="../js/select2.min.js"></script>
 
 </head>
 <body>
@@ -46,9 +50,9 @@
   <div class="pagetitle container d-flex justify-content-start align-items-center">
     <form action="flight-selection.html" class="row">
       <div class="col d-inline-flex align-items-center">
-        <select id="from" style="max-width: 10em; min-width: 7em" name="source" class="form-select"></select>
+        <select id="from" style="max-width: 8em; min-width: 7em" name="source" class="form-select autoComplete"></select>
         <small class="breadcrumb-item active p-3">به</small>
-        <select id="to" style="max-width: 8em; min-width: 7em" name="destination" class="form-select"></select>
+        <select id="to" style="max-width: 8em; min-width: 7em" name="destination" class="form-select autoComplete"></select>
       </div>
       <div class="col d-inline-flex align-items-center">
             <span id="dtp1" class="cursor-pointer" data-mds-dtp-guid="166d60f0-7f3b-49be-bcf8-8f9361736d75"
@@ -76,43 +80,6 @@
       </div>
     </form>
   </div>
-
-  <!--  <div class="row">-->
-  <!--    <div class="booking-form">-->
-  <!--      <form action="flight-selection.html">-->
-  <!--        <div class="row">-->
-  <!--          <div class="form-group col-md-2">-->
-  <!--            <select id="from" name="source" class="form-select form-select-lg"></select>-->
-  <!--          </div>-->
-  <!--          <div class="form-group col-md-2">-->
-  <!--            <select id="to" name="destination" class="form-select form-select-lg"></select>-->
-  <!--          </div>-->
-  <!--          <div class="col-md-2 form-group">-->
-  <!--            <span id="dtp1" class="cursor-pointer" data-mds-dtp-guid="166d60f0-7f3b-49be-bcf8-8f9361736d75"-->
-  <!--                  data-bs-original-title="" title="" data-mds-dtp-group="group1" data-from-date="true">-->
-  <!--                  <input placeholder="تاریخ رفت" style="max-width: 7em" id="dtp1Val" type="text" name="departDate" data-name="dtp1-text" class="form-control">-->
-  <!--                </span>-->
-  <!--          </div>-->
-  <!--          <div class="col-md-2 form-group">-->
-  <!--            <span id="dtp2" class="cursor-pointer" data-mds-dtp-guid="f7ffbe01-5635-4f73-b722-b624dd83b61a"-->
-  <!--                  data-bs-original-title="" title="" data-mds-dtp-group="group1" data-to-date="true">-->
-  <!--                  <input placeholder="تاریخ برگشت" style="max-width: 7em" id="dtp2Val" type="text" name="returnDate" data-name="dtp2-text" class="form-control">-->
-  <!--                </span>-->
-  <!--          </div>-->
-  <!--          <div class="col-md-2 form-group">-->
-  <!--            <span class="form-label">تعداد مسافران</span>-->
-  <!--            <input id="passengersCount" class="form-control" name="passengers" placeholder="تعداد" type="number" min="1"-->
-  <!--                   value="1" required>-->
-  <!--          </div>-->
-  <!--          <div class="col-md-2">-->
-  <!--            <div class="form-btn">-->
-  <!--              <button class="submit-btn">جستجوی بلیط</button>-->
-  <!--            </div>-->
-  <!--          </div>-->
-  <!--        </div>-->
-  <!--      </form>-->
-  <!--    </div>-->
-  <!--  </div>-->
 
 </header><!-- End Header -->
 
@@ -184,10 +151,6 @@
     </template>
   </div>
 </main>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/gh/xcash/bootstrap-autocomplete@v2.3.7/dist/latest/bootstrap-autocomplete.min.js"></script>
 <script src="../js/persianDatePicker/mds.bs.datetimepicker.js"></script>
 <script src="../js/persianDatePicker/dtpDefiner.js"></script>
 <script src="../js/data.js"></script>
