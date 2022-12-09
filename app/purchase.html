@@ -38,15 +38,15 @@
 
   </div>
 <div class="container" id="passengerSection">
-  <div class="row" id="duplicater">
+  <div class="row" id="passenger_0">
     <div class="col">
-      <input type="text" class="form-control" placeholder="شماره پاسپورت" aria-label="First name"/>
+      <input type="text" id="passportNumber" class="form-control" placeholder="شماره پاسپورت" aria-label="First name"/>
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="نام خانوادگی" aria-label="Last name">
+      <input type="text" id="lastName" class="form-control" placeholder="نام خانوادگی" aria-label="Last name">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="نام" aria-label="Last name">
+      <input type="text" id="firstName" class="form-control" placeholder="نام" aria-label="Last name">
     </div>
   </div>
 </div>
@@ -56,7 +56,7 @@
 </section>
 
 <section class="p-5">
-  <button type="button" class="btn btn-primary btn-lg btn-block">ادامه خرید</button>
+  <button type="button" onclick="saveInformation()" class="btn btn-primary btn-lg btn-block">ادامه خرید</button>
 </section>
 
 
