@@ -6,17 +6,3 @@ body {
   background: #f6f9ff;
   color: #444444;
 }
-
-.bg-image {
-  /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
