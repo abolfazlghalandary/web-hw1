@@ -12,7 +12,6 @@
   <link href="../img/Khosro-dark.png" rel="icon">
 
   <!--  custom stylesheets-->
-  <link rel="stylesheet" href="../css/formStyle.css">
   <link rel="stylesheet" href="../css/flight-selection-style.css">
   <link href="../css/style.css" rel="stylesheet">
 
@@ -44,46 +43,76 @@
     <i class="bi bi-list toggle-sidebar-btn"></i>
   </div><!-- End Logo -->
 
-  <div class="row">
-    <div class="booking-form">
-      <form action="flight-selection.html">
-        <div class="row">
-          <div class="form-group col-md-2">
-            <span class="form-label">مبدأ</span>
-            <select id="from" name="source" class="form-select form-select-lg"></select>
-          </div>
-          <div class="form-group col-md-2">
-            <span class="form-label">مقصد</span>
-            <select id="to" name="destination" class="form-select form-select-lg"></select>
-          </div>
-          <div class="col-md-2 form-group">
-            <span class="form-label">تاریخ رفت</span>
+  <div class="pagetitle container d-flex justify-content-start align-items-center">
+    <form action="flight-selection.html" class="row">
+      <div class="col d-inline-flex align-items-center">
+        <select id="from" style="max-width: 10em; min-width: 7em" name="source" class="form-select"></select>
+        <small class="breadcrumb-item active p-3">به</small>
+        <select id="to" style="max-width: 8em; min-width: 7em" name="destination" class="form-select"></select>
+      </div>
+      <div class="col d-inline-flex align-items-center">
             <span id="dtp1" class="cursor-pointer" data-mds-dtp-guid="166d60f0-7f3b-49be-bcf8-8f9361736d75"
                   data-bs-original-title="" title="" data-mds-dtp-group="group1" data-from-date="true">
-                  <input id="dtp1Val" type="text" name="departDate" data-name="dtp1-text" class="form-control">
+                  <input placeholder="تاریخ رفت" style="max-width: 8em; min-width: 7em" id="dtp1Val" type="text" name="departDate"
+                         data-name="dtp1-text" class="form-control">
                 </span>
-          </div>
-          <div class="col-md-2 form-group">
-            <span class="form-label">تاریخ برگشت</span>
-            <span id="dtp2" class="cursor-pointer" data-mds-dtp-guid="f7ffbe01-5635-4f73-b722-b624dd83b61a"
-                  data-bs-original-title="" title="" data-mds-dtp-group="group1" data-to-date="true">
-                  <input id="dtp2Val" type="text" name="returnDate" data-name="dtp2-text" class="form-control">
+        <small class="breadcrumb-item active p-3">تا</small>
+        <span id="dtp2" class="cursor-pointer" data-mds-dtp-guid="f7ffbe01-5635-4f73-b722-b624dd83b61a"
+              data-bs-original-title="" title="" data-mds-dtp-group="group1" data-to-date="true">
+                  <input placeholder="تاریخ برگشت" style="max-width: 8em; min-width: 7em" id="dtp2Val" type="text" name="returnDate"
+                         data-name="dtp2-text" class="form-control">
                 </span>
-          </div>
-          <div class="col-md-2 form-group">
-            <span class="form-label">تعداد مسافران</span>
-            <input id="passengersCount" class="form-control" name="passengers" placeholder="تعداد" type="number" min="1"
-                   value="1" required>
-          </div>
-          <div class="col-md-2">
-            <div class="form-btn">
-              <button class="submit-btn">جستجوی بلیط</button>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
+      </div>
+      <div class="col d-inline-flex align-items-center">
+        <input id="passengersCount" style="max-width: 4em" class="form-control" name="passengers" placeholder="تعداد"
+               type="number" min="1"
+               value="1" required>
+        <span>
+                <img src="../img/img.png" alt="passenger" style="max-width: 20px" class="m-2"/>
+          </span>
+      </div>
+      <div class="col d-inline-flex align-items-center form-btn">
+        <button class="submit-btn btn btn-secondary">جستجوی بلیط</button>
+      </div>
+    </form>
   </div>
+
+  <!--  <div class="row">-->
+  <!--    <div class="booking-form">-->
+  <!--      <form action="flight-selection.html">-->
+  <!--        <div class="row">-->
+  <!--          <div class="form-group col-md-2">-->
+  <!--            <select id="from" name="source" class="form-select form-select-lg"></select>-->
+  <!--          </div>-->
+  <!--          <div class="form-group col-md-2">-->
+  <!--            <select id="to" name="destination" class="form-select form-select-lg"></select>-->
+  <!--          </div>-->
+  <!--          <div class="col-md-2 form-group">-->
+  <!--            <span id="dtp1" class="cursor-pointer" data-mds-dtp-guid="166d60f0-7f3b-49be-bcf8-8f9361736d75"-->
+  <!--                  data-bs-original-title="" title="" data-mds-dtp-group="group1" data-from-date="true">-->
+  <!--                  <input placeholder="تاریخ رفت" style="max-width: 7em" id="dtp1Val" type="text" name="departDate" data-name="dtp1-text" class="form-control">-->
+  <!--                </span>-->
+  <!--          </div>-->
+  <!--          <div class="col-md-2 form-group">-->
+  <!--            <span id="dtp2" class="cursor-pointer" data-mds-dtp-guid="f7ffbe01-5635-4f73-b722-b624dd83b61a"-->
+  <!--                  data-bs-original-title="" title="" data-mds-dtp-group="group1" data-to-date="true">-->
+  <!--                  <input placeholder="تاریخ برگشت" style="max-width: 7em" id="dtp2Val" type="text" name="returnDate" data-name="dtp2-text" class="form-control">-->
+  <!--                </span>-->
+  <!--          </div>-->
+  <!--          <div class="col-md-2 form-group">-->
+  <!--            <span class="form-label">تعداد مسافران</span>-->
+  <!--            <input id="passengersCount" class="form-control" name="passengers" placeholder="تعداد" type="number" min="1"-->
+  <!--                   value="1" required>-->
+  <!--          </div>-->
+  <!--          <div class="col-md-2">-->
+  <!--            <div class="form-btn">-->
+  <!--              <button class="submit-btn">جستجوی بلیط</button>-->
+  <!--            </div>-->
+  <!--          </div>-->
+  <!--        </div>-->
+  <!--      </form>-->
+  <!--    </div>-->
+  <!--  </div>-->
 
 </header><!-- End Header -->
 
@@ -91,9 +120,9 @@
   <div class="pagetitle container d-flex justify-content-start align-items-center">
     <div class="row">
       <div class="col d-inline-flex align-items-center">
-          <h1 id="source">تهران</h1>
-          <small class="breadcrumb-item active p-3">به</small>
-          <h1 id="destination">مشهد</h1>
+        <h1 id="source">تهران</h1>
+        <small class="breadcrumb-item active p-3">به</small>
+        <h1 id="destination">مشهد</h1>
       </div>
       <div class="col d-inline-flex align-items-center">
         <h1 id="start">1401/10/30</h1>
@@ -158,6 +187,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/xcash/bootstrap-autocomplete@v2.3.7/dist/latest/bootstrap-autocomplete.min.js"></script>
 <script src="../js/persianDatePicker/mds.bs.datetimepicker.js"></script>
 <script src="../js/persianDatePicker/dtpDefiner.js"></script>
 <script src="../js/data.js"></script>
