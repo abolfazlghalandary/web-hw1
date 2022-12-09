@@ -37,7 +37,10 @@
 
   <div class="d-flex align-items-center justify-content-between">
     <a href="home.html" class="logo d-flex align-items-center">
-      <img src="../img/Khosro.png" alt="خسرو">
+      <picture>
+        <source srcset="../img/Khosro-dark.png" media="(prefers-color-scheme:dark)">
+        <img src="../img/Khosro.png" alt="خسرو">
+      </picture>
       <span class="d-none d-lg-block p-2">خسرو</span>
     </a>
     <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -70,7 +73,10 @@
                type="number" min="1"
                value="1" required>
         <span>
+            <picture>
+                <source srcset="../img/img-dark.png" media="(prefers-color-scheme:dark)">
                 <img src="../img/img.png" alt="passenger" style="max-width: 20px" class="m-2"/>
+            </picture>
           </span>
       </div>
       <div class="col d-inline-flex align-items-center form-btn">
@@ -97,8 +103,11 @@
       <div class="col d-inline-flex align-items-center">
         <h1 id="passengers">1</h1>
         <span>
-                <img src="../img/img.png" alt="passenger" style="max-width: 20px"/>
-          </span>
+            <picture>
+                <source srcset="../img/img-dark.png" media="(prefers-color-scheme:dark)">
+                <img src="../img/img.png" alt="passenger" style="max-width: 20px" class="m-2"/>
+            </picture>
+        </span>
       </div>
     </div>
   </div>
