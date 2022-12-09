@@ -27,6 +27,17 @@ button[id="addPassenger"]:hover{
   background-color: #b3d4fc;
 }
 
-
+div[id="endTime"]{
+  direction: rtl;
+}
+div[id="startTime"]{
+  direction: rtl;
+}
+div[id="destination"]{
+  direction: rtl;
+}
+div[id="source"]{
+  direction: rtl;
+}
 
 

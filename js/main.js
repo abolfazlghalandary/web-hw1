@@ -16,3 +16,7 @@ function addOptionsToSelectElement(options, element){
 function searchTickets(){
   window.location = "flight-selection.html"
 }
+
+function loginPage(){
+  window.location= "../app/login.html";
+}
