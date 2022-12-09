@@ -15,6 +15,7 @@ function addToTickets(ticketInfo, limited) {
   let priceElement = clone.querySelector("#price");
   priceElement.innerText = ticketInfo.price
   priceElement.addEventListener("click", function () {
+    ticketInfo.passengersCount = document.getElementById("passengers").innerText;
     let json = JSON.stringify({ticketInfo});
     sessionStorage.setItem("buyingTicket", json);
     if (sessionStorage.getItem("token") === undefined) {
