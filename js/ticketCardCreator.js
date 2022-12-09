@@ -17,7 +17,12 @@ function addToTickets(ticketInfo, limited) {
   priceElement.addEventListener("click", function () {
     let json = JSON.stringify({ticketInfo});
     sessionStorage.setItem("buyingTicket", json);
-    window.location.href = "purchase.html";
+    if (sessionStorage.getItem("token") === undefined) {
+      sessionStorage.setItem("afterLoginPage", "purchase.html");
+      window.location.href = "login.html";
+    } else {
+      window.location.href = "purchase.html";
+    }
   });
   tickets.appendChild(clone);
 }
