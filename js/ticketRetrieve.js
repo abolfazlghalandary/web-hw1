@@ -55,7 +55,7 @@ function GenerateRandomTicket() {
 
 function GenerateRandomTickets() {
   let tickets = [];
-  for (let i = 0; i < Math.floor(Math.random() * 11) + 1; i++) {
+  for (let i = 0; i < (Math.floor(Math.random() * 11) + 1); i++) {
     tickets.push(GenerateRandomTicket());
   }
   return tickets;
@@ -71,10 +71,16 @@ let departDate = params.departDate
 let returnDate = params.returnDate
 let passengersCount = params.passengers
 
-for (let ticket of GenerateRandomTickets().filter(ticket => ticket.remaining >= passengersCount)/*getFilteredTickets()*/) {
+let sellableTickets = GenerateRandomTickets().filter(ticket => ticket.remaining >= passengersCount);
+if (sellableTickets.length === 0) {
+  let notFoundMessage = document.getElementById("notFound").content.cloneNode(true);
+  document.getElementById("tickets").appendChild(notFoundMessage);
+}
+for (let ticket of sellableTickets/*getFilteredTickets()*/) {
   let limited = passengersCount * 3 >= ticket.remaining;
   addToTickets(ticket, limited)
 }
+
 SetSearchInfoHeader();
 SetDefaultSearchFields();
 
