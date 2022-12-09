@@ -1238,3 +1238,20 @@ h6 {
   font-size: 13px;
   color: #012970;
 }
+
+@media (prefers-color-scheme: dark) {
+  .pagetitle h1,
+  .card-title,
+  .accordion-button:not(.collapsed),
+  .logo span,
+  .header .toggle-sidebar-btn,
+  .header .search-form input,
+  .header .search-form button i
+  {
+    color: white;
+  }
+
+  .header {
+    background-color: #222222;
+  }
+}
