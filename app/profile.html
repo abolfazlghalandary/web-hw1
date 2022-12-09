@@ -6,7 +6,7 @@
 
   <meta name="color-scheme" content="light dark">
 
-  <title>انتخاب بلیط - خسرو</title>
+  <title>اطلاعات کاربر - خسرو</title>
   <link href="../img/Khosro-dark.png" rel="icon">
 
   <!--  custom stylesheets-->
@@ -43,68 +43,16 @@
     <i class="bi bi-list toggle-sidebar-btn"></i>
   </div><!-- End Logo -->
 
-  <div class="pagetitle container d-flex justify-content-start align-items-center">
-    <form action="flight-selection.html" class="row">
-      <div class="col d-inline-flex align-items-center">
-        <select id="fromCities" style="max-width: 8em; min-width: 7em" name="source" class="form-select"></select>
-        <small class="breadcrumb-item active p-3">به</small>
-        <select id="toCities" style="max-width: 8em; min-width: 7em" name="destination" class="form-select"></select>
-      </div>
-      <div class="col d-inline-flex align-items-center">
-            <span id="dtp1" class="cursor-pointer" data-mds-dtp-guid="166d60f0-7f3b-49be-bcf8-8f9361736d75"
-                  data-bs-original-title="" title="" data-mds-dtp-group="group1" data-from-date="true">
-                  <input placeholder="تاریخ رفت" style="max-width: 8em; min-width: 7em" id="dtp1Val" type="text"
-                         name="departDate"
-                         data-name="dtp1-text" class="form-control">
-                </span>
-        <small class="breadcrumb-item active p-3">تا</small>
-        <span id="dtp2" class="cursor-pointer" data-mds-dtp-guid="f7ffbe01-5635-4f73-b722-b624dd83b61a"
-              data-bs-original-title="" title="" data-mds-dtp-group="group1" data-to-date="true">
-                  <input placeholder="تاریخ برگشت" style="max-width: 8em; min-width: 7em" id="dtp2Val" type="text"
-                         name="returnDate"
-                         data-name="dtp2-text" class="form-control">
-                </span>
-      </div>
-      <div class="col d-inline-flex align-items-center">
-        <input id="passengersCount" style="max-width: 4em" class="form-control" name="passengers" placeholder="تعداد"
-               type="number" min="1"
-               value="1" required>
-        <span>
-            <picture>
-                <source srcset="../img/img-dark.png" media="(prefers-color-scheme:dark)">
-                <img src="../img/img.png" alt="passenger" style="max-width: 20px" class="m-2"/>
-            </picture>
-          </span>
-      </div>
-      <div class="col d-inline-flex align-items-center form-btn">
-        <button class="submit-btn btn btn-secondary">جستجوی بلیط</button>
-      </div>
-    </form>
-  </div>
-
 </header><!-- End Header -->
 
 <main id="main" class="main">
   <div class="pagetitle container d-flex justify-content-start align-items-center">
     <div class="row">
       <div class="col d-inline-flex align-items-center">
-        <h1 id="source">تهران</h1>
-        <small class="breadcrumb-item active p-3">به</small>
-        <h1 id="destination">مشهد</h1>
+        <h1 id="username">نام کاربری</h1>
       </div>
       <div class="col d-inline-flex align-items-center">
-        <h1 id="start">1401/10/30</h1>
-        <small class="breadcrumb-item active p-3">تا</small>
-        <h1 id="end">1401/11/30</h1>
-      </div>
-      <div class="col d-inline-flex align-items-center">
-        <h1 id="passengers">1</h1>
-        <span>
-            <picture>
-                <source srcset="../img/img-dark.png" media="(prefers-color-scheme:dark)">
-                <img src="../img/img.png" alt="passenger" style="max-width: 20px" class="m-2"/>
-            </picture>
-        </span>
+        <h1 id="email">ایمیل</h1>
       </div>
     </div>
   </div>

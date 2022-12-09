@@ -10,10 +10,9 @@ function login() {
   if (validate(username, password)) {
     let token = generateRandomToken();
     sessionStorage.setItem("token", token);
-    window.location = '../app/home.html'
   }
   else{
-    alert("incorrect username or password")
+    alert("نام کاربری یا رمز عبور اشتباه است.")
   }
 }
 
@@ -21,5 +20,4 @@ function validate(username, password){
   let inputUsername = document.getElementById('username').value;
   let inputPassword = document.getElementById('password').value;
   return username === inputUsername && password === inputPassword;
-
 }
