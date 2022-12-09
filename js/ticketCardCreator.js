@@ -15,9 +15,15 @@ function addToTickets(ticketInfo, limited) {
   let priceElement = clone.querySelector("#price");
   priceElement.innerText = ticketInfo.price
   priceElement.addEventListener("click", function () {
+    ticketInfo.passengersCount = document.getElementById("passengers").innerText;
     let json = JSON.stringify({ticketInfo});
     sessionStorage.setItem("buyingTicket", json);
-    window.location.href = "purchase.html";
+    if (sessionStorage.getItem("token") === undefined) {
+      sessionStorage.setItem("afterLoginPage", "purchase.html");
+      window.location.href = "login.html";
+    } else {
+      window.location.href = "purchase.html";
+    }
   });
   tickets.appendChild(clone);
 }

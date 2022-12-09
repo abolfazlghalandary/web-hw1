@@ -51,6 +51,7 @@ function saveInformation(){
   console.log(json)
   localStorage.setItem("passengerInfos",json);
   window.location = '../app/home.html'
+  alert("خرید بلیط با موفقیت انجام شد.")
 }
 
 let x = sessionStorage.getItem("buyingTicket");
