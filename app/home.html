@@ -52,7 +52,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <img src="../img/logo.jpg" style="max-width: 90px;" alt="خسرو">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -64,13 +65,16 @@
           <a class="nav-link" href="#">تماس با ما</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+             aria-expanded="false">
             بلیط
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="text-align: right">
             <li><a class="dropdown-item" href="#">زمینی</a></li>
             <li><a class="dropdown-item" href="#">هوایی</a></li>
-            <li><hr class="dropdown-divider"></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
             <li><a class="dropdown-item" href="#">فضایی</a></li>
           </ul>
         </li>
@@ -109,19 +113,25 @@
               </div>
               <div class="col-md-2 form-group">
                 <span class="form-label">تاریخ رفت</span>
-                <span id="dtp1" class="cursor-pointer" data-mds-dtp-guid="166d60f0-7f3b-49be-bcf8-8f9361736d75" data-bs-original-title="" title="" data-mds-dtp-group="group1" data-from-date="true">
+                <span id="dtp1" class="cursor-pointer" data-mds-dtp-guid="166d60f0-7f3b-49be-bcf8-8f9361736d75"
+                      data-bs-original-title="" title="" data-mds-dtp-group="group1" data-from-date="true">
                   <input type="text" name="departDate" data-name="dtp1-text" class="form-control">
                 </span>
               </div>
               <div class="col-md-2 form-group">
                 <span class="form-label">تاریخ برگشت</span>
-                <span id="dtp2" class="cursor-pointer" data-mds-dtp-guid="f7ffbe01-5635-4f73-b722-b624dd83b61a" data-bs-original-title="" title="" data-mds-dtp-group="group1" data-to-date="true">
+                <span id="dtp2" class="cursor-pointer" data-mds-dtp-guid="f7ffbe01-5635-4f73-b722-b624dd83b61a"
+                      data-bs-original-title="" title="" data-mds-dtp-group="group1" data-to-date="true">
                   <input type="text" name="returnDate" data-name="dtp2-text" class="form-control">
                 </span>
               </div>
               <div class="col-md-2 form-group">
-                <span class="form-label">تعداد مسافران</span>
-                <input class="form-control" name="passengers" type="number" min="1" value="1" required>
+                <span class="form-label " >تعداد مسافران</span>
+                <div class="outer form-control">
+                  <button type="button" id="sub" class="left form-btn" onclick="decrease()">-</button>
+                  <input style="text-align: center" id="numberOfPassengers" type="text" value="1" class="middle form-text" pattern="[0-9]"/>
+                  <button type="button" id="add" class="right form-btn" onclick="increase()">+</button>
+                </div>
               </div>
               <div class="col-md-2">
                 <div class="form-btn">
@@ -161,7 +171,7 @@
     </section>
 
     <section class="DescSection pink-bg">
-      <div class="container" >
+      <div class="container">
         <h1 id="services" class="title text-center">خدمات</h1>
         <div class="space"></div>
         <div class="row">
@@ -260,37 +270,57 @@
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                          aria-expanded="true" aria-controls="collapseOne">
                     خسرو کیست؟
                   </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                     data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse
+                    plugin adds the appropriate classes that we use to style each element. These classes control the
+                    overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
+                    this with custom CSS or overriding our default variables. It's also worth noting that just about any
+                    HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                     چرا از خسرو خرید کنیم؟
                   </button>
                 </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                     data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
+                    collapse plugin adds the appropriate classes that we use to style each element. These classes
+                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
+                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
+                    overflow.
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                     چرا نباید از خسرو خرید نکنیم؟
                   </button>
                 </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                     data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                    collapse plugin adds the appropriate classes that we use to style each element. These classes
+                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
+                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
+                    overflow.
                   </div>
                 </div>
               </div>
@@ -326,6 +356,7 @@
 
 <script src="../js/data.js"></script>
 <script src="../js/main.js"></script>
+<script src="../js/numberOfPassengersInput.js"></script>
 </body>
 
 </html>
