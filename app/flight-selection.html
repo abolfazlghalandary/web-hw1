@@ -7,12 +7,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
         integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
 
-  <title>انتخاب بلیط - خسرو</title>
+  <title>خرید بلیط - خسرو</title>
 
-  <meta name="theme-color" content="#fafafa">
+  <link href="../img/Khosro-dark.png" rel="icon">
 
   <!--  custom stylesheets-->
   <link rel="stylesheet" href="../css/formStyle.css">
+  <link rel="stylesheet" href="../css/flight-selection-style.css">
+  <link href="../css/style.css" rel="stylesheet">
 
   <!--  font-awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -32,90 +34,319 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid row">
-    <img src="../img/Khosro.png" style="max-width: 90px;" alt="خسرو">
+<header id="header" class="header fixed-top d-flex align-items-center">
 
-    <div class="container" style="max-width: 30em">
-      <div class="row">
-        <div class="col-4">
-          <span id="source">تهران</span>
-          <span>></span>
-          <span id="destination">مشهد</span>
-        </div>
-        <div class="col-6">
-          <span id="start">1401/10/30</span>
-          <span>></span>
-          <span id="end">1401/11/30</span>
-        </div>
-        <div class="col-2">
-          <span id="passengers">1</span>
-          <span>
-            <img src="../img/img.png" alt="passenger" style="max-width: 20px">
-          </span>
-        </div>
-      </div>
-    </div>
+  <div class="d-flex align-items-center justify-content-between">
+    <a href="home.html" class="logo d-flex align-items-center">
+      <img src="../img/Khosro.png" alt="خسرو">
+      <span class="d-none d-lg-block p-1">خسرو</span>
+    </a>
+    <i class="bi bi-list toggle-sidebar-btn"></i>
+  </div><!-- End Logo -->
 
-    <div class="accordion" style="max-width: 55em">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button align-content-center" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
-                  aria-expanded="true" aria-controls="collapseOne">
-            <span class="container">ویرایش</span>
-            <img src="../img/search.svg" alt="search">
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-             data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <div class="container">
-              <div class="row">
-                <div class="booking-form">
-                  <form action="flight-selection.html">
-                    <div class="row">
-                      <div class="form-group col-md-2">
-                        <span class="form-label">مبدأ</span>
-                        <select id="from" name="source" class="form-select form-select-lg"></select>
-                      </div>
-                      <div class="form-group col-md-2">
-                        <span class="form-label">مقصد</span>
-                        <select id="to" name="destination" class="form-select form-select-lg" ></select>
-                      </div>
-                      <div class="col-md-2 form-group">
-                        <span class="form-label">تاریخ رفت</span>
-                        <span id="dtp1" class="cursor-pointer" data-mds-dtp-guid="166d60f0-7f3b-49be-bcf8-8f9361736d75" data-bs-original-title="" title="" data-mds-dtp-group="group1" data-from-date="true">
-                  <input type="text" name="departDate" data-name="dtp1-text" class="form-control">
-                </span>
-                      </div>
-                      <div class="col-md-2 form-group">
-                        <span class="form-label">تاریخ برگشت</span>
-                        <span id="dtp2" class="cursor-pointer" data-mds-dtp-guid="f7ffbe01-5635-4f73-b722-b624dd83b61a" data-bs-original-title="" title="" data-mds-dtp-group="group1" data-to-date="true">
-                  <input type="text" name="returnDate" data-name="dtp2-text" class="form-control">
-                </span>
-                      </div>
-                      <div class="col-md-2 form-group">
-                        <span class="form-label">تعداد مسافران</span>
-                        <input class="form-control" name="passengers" type="number" min="1" value="1" required>
-                      </div>
-                      <div class="col-md-2">
-                        <div class="form-btn">
-                          <button class="submit-btn">جستجوی بلیط</button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
+  <div class="search-bar">
+    <form class="search-form d-flex align-items-center" method="POST" action="#">
+      <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+      <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+    </form>
+  </div><!-- End Search Bar -->
+
+  <nav class="header-nav ms-auto">
+    <ul class="d-flex align-items-center">
+
+      <li class="nav-item d-block d-lg-none">
+        <a class="nav-link nav-icon search-bar-toggle " href="#">
+          <i class="bi bi-search"></i>
+        </a>
+      </li><!-- End Search Icon-->
+
+      <li class="nav-item dropdown">
+
+        <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+          <i class="bi bi-bell"></i>
+          <span class="badge bg-primary badge-number">4</span>
+        </a><!-- End Notification Icon -->
+
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+          <li class="dropdown-header">
+            You have 4 new notifications
+            <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="notification-item">
+            <i class="bi bi-exclamation-circle text-warning"></i>
+            <div>
+              <h4>Lorem Ipsum</h4>
+              <p>Quae dolorem earum veritatis oditseno</p>
+              <p>30 min. ago</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav>
+          </li>
 
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="notification-item">
+            <i class="bi bi-x-circle text-danger"></i>
+            <div>
+              <h4>Atque rerum nesciunt</h4>
+              <p>Quae dolorem earum veritatis oditseno</p>
+              <p>1 hr. ago</p>
+            </div>
+          </li>
+
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="notification-item">
+            <i class="bi bi-check-circle text-success"></i>
+            <div>
+              <h4>Sit rerum fuga</h4>
+              <p>Quae dolorem earum veritatis oditseno</p>
+              <p>2 hrs. ago</p>
+            </div>
+          </li>
+
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="notification-item">
+            <i class="bi bi-info-circle text-primary"></i>
+            <div>
+              <h4>Dicta reprehenderit</h4>
+              <p>Quae dolorem earum veritatis oditseno</p>
+              <p>4 hrs. ago</p>
+            </div>
+          </li>
+
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li class="dropdown-footer">
+            <a href="#">Show all notifications</a>
+          </li>
+
+        </ul><!-- End Notification Dropdown Items -->
+
+      </li><!-- End Notification Nav -->
+
+      <li class="nav-item dropdown">
+
+        <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+          <i class="bi bi-chat-left-text"></i>
+          <span class="badge bg-success badge-number">3</span>
+        </a><!-- End Messages Icon -->
+
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+          <li class="dropdown-header">
+            You have 3 new messages
+            <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="message-item">
+            <a href="#">
+              <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
+              <div>
+                <h4>Maria Hudson</h4>
+                <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                <p>4 hrs. ago</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="message-item">
+            <a href="#">
+              <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
+              <div>
+                <h4>Anna Nelson</h4>
+                <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                <p>6 hrs. ago</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="message-item">
+            <a href="#">
+              <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
+              <div>
+                <h4>David Muldon</h4>
+                <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                <p>8 hrs. ago</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="dropdown-footer">
+            <a href="#">Show all messages</a>
+          </li>
+
+        </ul><!-- End Messages Dropdown Items -->
+
+      </li><!-- End Messages Nav -->
+
+      <li class="nav-item dropdown pe-3">
+
+        <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+          <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+          <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+        </a><!-- End Profile Iamge Icon -->
+
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+          <li class="dropdown-header">
+            <h6>Kevin Anderson</h6>
+            <span>Web Designer</span>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <i class="bi bi-person"></i>
+              <span>My Profile</span>
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <i class="bi bi-gear"></i>
+              <span>Account Settings</span>
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+              <i class="bi bi-question-circle"></i>
+              <span>Need Help?</span>
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="#">
+              <i class="bi bi-box-arrow-right"></i>
+              <span>Sign Out</span>
+            </a>
+          </li>
+
+        </ul><!-- End Profile Dropdown Items -->
+      </li><!-- End Profile Nav -->
+
+    </ul>
+  </nav><!-- End Icons Navigation -->
+
+</header><!-- End Header -->
+
+
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
+<!--  <div class="container-fluid row">-->
+<!--    <img src="../img/Khosro.png" style="max-width: 90px;" alt="خسرو">-->
+
+<!--    <div class="container" style="max-width: 30em">-->
+<!--      <div class="row">-->
+<!--        <div class="col-4">-->
+<!--          <span id="source">تهران</span>-->
+<!--          <span>></span>-->
+<!--          <span id="destination">مشهد</span>-->
+<!--        </div>-->
+<!--        <div class="col-6">-->
+<!--          <span id="start">1401/10/30</span>-->
+<!--          <span>></span>-->
+<!--          <span id="end">1401/11/30</span>-->
+<!--        </div>-->
+<!--        <div class="col-2">-->
+<!--          <span id="passengers">1</span>-->
+<!--          <span>-->
+<!--            <img src="../img/img.png" alt="passenger" style="max-width: 20px">-->
+<!--          </span>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="accordion" style="max-width: 55em">-->
+<!--      <div class="accordion-item">-->
+<!--        <h2 class="accordion-header" id="headingOne">-->
+<!--          <button class="accordion-button align-content-center" type="button" data-bs-toggle="collapse"-->
+<!--                  data-bs-target="#collapseOne"-->
+<!--                  aria-expanded="true" aria-controls="collapseOne">-->
+<!--            <span class="container">ویرایش</span>-->
+<!--            <img src="../img/search.svg" alt="search">-->
+<!--          </button>-->
+<!--        </h2>-->
+<!--        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"-->
+<!--             data-bs-parent="#accordionExample">-->
+<!--          <div class="accordion-body">-->
+<!--            <div class="container">-->
+<!--              <div class="row">-->
+<!--                <div class="booking-form">-->
+<!--                  <form action="flight-selection.html">-->
+<!--                    <div class="row">-->
+<!--                      <div class="form-group col-md-2">-->
+<!--                        <span class="form-label">مبدأ</span>-->
+<!--                        <select id="from" name="source" class="form-select form-select-lg"></select>-->
+<!--                      </div>-->
+<!--                      <div class="form-group col-md-2">-->
+<!--                        <span class="form-label">مقصد</span>-->
+<!--                        <select id="to" name="destination" class="form-select form-select-lg" ></select>-->
+<!--                      </div>-->
+<!--                      <div class="col-md-2 form-group">-->
+<!--                        <span class="form-label">تاریخ رفت</span>-->
+<!--                        <span id="dtp1" class="cursor-pointer" data-mds-dtp-guid="166d60f0-7f3b-49be-bcf8-8f9361736d75" data-bs-original-title="" title="" data-mds-dtp-group="group1" data-from-date="true">-->
+<!--                  <input type="text" name="departDate" data-name="dtp1-text" class="form-control">-->
+<!--                </span>-->
+<!--                      </div>-->
+<!--                      <div class="col-md-2 form-group">-->
+<!--                        <span class="form-label">تاریخ برگشت</span>-->
+<!--                        <span id="dtp2" class="cursor-pointer" data-mds-dtp-guid="f7ffbe01-5635-4f73-b722-b624dd83b61a" data-bs-original-title="" title="" data-mds-dtp-group="group1" data-to-date="true">-->
+<!--                  <input type="text" name="returnDate" data-name="dtp2-text" class="form-control">-->
+<!--                </span>-->
+<!--                      </div>-->
+<!--                      <div class="col-md-2 form-group">-->
+<!--                        <span class="form-label">تعداد مسافران</span>-->
+<!--                        <input class="form-control" name="passengers" type="number" min="1" value="1" required>-->
+<!--                      </div>-->
+<!--                      <div class="col-md-2">-->
+<!--                        <div class="form-btn">-->
+<!--                          <button class="submit-btn">جستجوی بلیط</button>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </form>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</nav>-->
+<main id="main" class="main">
 <div id="tickets" class="container-fluid col text-center">
   <template>
     <div id="ticketTemplate" class="card">
@@ -157,7 +388,7 @@
     </div>
   </template>
 </div>
-
+</main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
