@@ -1,9 +1,9 @@
 # خانه
-![img.png](img.png)
+![img.png](img.png) ✔
 
-![img_1.png](img_1.png)
+![img_1.png](img_1.png) ✔
 
-![img_2.png](img_2.png)
+![img_2.png](img_2.png) ✔
 
 ![img_3.png](img_3.png)
 
@@ -41,7 +41,7 @@
 ![img_11.png](img_11.png)
   - ![img_12.png](img_12.png)
 
-![img_13.png](img_13.png)
+![img_13.png](img_13.png) ✔
 
 ![img_14.png](img_14.png)
 
