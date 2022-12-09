@@ -1,14 +1,3 @@
-input[type="text"]{
-  direction: rtl;
-}
-input[type="password"]{
-  direction: rtl;
-}
-
 input:focus::placeholder {
   color: transparent;
-}
-
-body {
-  background-image: url('../img/login.jpg');
 }

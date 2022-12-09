@@ -21,5 +21,4 @@ function validate(username, password){
   let inputUsername = document.getElementById('username').value;
   let inputPassword = document.getElementById('password').value;
   return username === inputUsername && password === inputPassword;
-
 }
