@@ -63,4 +63,14 @@ document.querySelector("#destination").innerText = ticketInfo.ticketInfo.destina
 document.querySelector("#source").innerText = ticketInfo.ticketInfo.sourceLocation;
 
 
-console.log(sessionStorage.getItem("buyingTicket"));
+let ticket = sessionStorage.getItem('buyingTicket');
+let ticketObject = JSON.parse(ticket);
+let numberOfPassengers = ticketObject.ticketInfo.passengersCount;
+let original = document.getElementById('passenger_0');
+let passengerSection = document.getElementById('passengerSection');
+for(let i = 1; i < numberOfPassengers; i++){
+  let copy = original.cloneNode(true);
+  copy.id = 'passenger_' + i;
+  passengerSection.appendChild(copy);
+}
+
