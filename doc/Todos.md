@@ -5,7 +5,7 @@
 
 ![img_2.png](img_2.png) ✔
 
-![img_3.png](img_3.png)
+![img_3.png](img_3.png) ✔
 
 ---
 
@@ -18,7 +18,7 @@
 
 ## bugs
 
-![img_15.png](img_15.png)
+![img_15.png](img_15.png) ✔
 ---
 
 # صفحە ی خرید
