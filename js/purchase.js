@@ -26,8 +26,8 @@ function saveInformation(){
       i = i + 1;
     }
   }
-  let startTime = document.getElementById('startTime').innerText;
-  let endTime = document.getElementById('endTime').innerText;
+  let departDate = document.getElementById('startTime').innerText;
+  let returnDate = document.getElementById('endTime').innerText;
   let source = document.getElementById('source').innerText;
   let destination = document.getElementById('destination').innerText;
   let passengerList = [];
@@ -45,8 +45,8 @@ function saveInformation(){
   }
   let listOfAllData = [];
   let travelInformation = {
-    startTime : startTime,
-    endTime : endTime,
+    departDate : departDate,
+    returnDate : returnDate,
     source : source,
     destination : destination,
     passengerList : passengerList
@@ -69,8 +69,8 @@ function saveInformation(){
 let x = sessionStorage.getItem("buyingTicket");
 let ticketInfo  = JSON.parse(x);
 
-document.querySelector("#endTime").innerText = ticketInfo.ticketInfo.endTime
-document.querySelector("#startTime").innerText = ticketInfo.ticketInfo.flightTime;
+document.querySelector("#endTime").innerText = ticketInfo.ticketInfo.returnDate
+document.querySelector("#startTime").innerText = ticketInfo.ticketInfo.departDate;
 document.querySelector("#destination").innerText = ticketInfo.ticketInfo.destination;
 document.querySelector("#source").innerText = ticketInfo.ticketInfo.sourceLocation;
 
