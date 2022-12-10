@@ -39,17 +39,29 @@ function saveInformation(){
     let informationOfPassenger = {
       lastname : lastName,
       firstName : firstName,
-      passportNumber : passportNumber,
-      startTime : startTime,
-      endTime: endTime,
-      source : source,
-      destination : destination
+      passportNumber : passportNumber
     };
     passengerList.push(informationOfPassenger);
   }
-  let json = JSON.stringify(passengerList);
+  let listOfAllData = [];
+  let travelInformation = {
+    startTime : startTime,
+    endTime : endTime,
+    source : source,
+    destination : destination,
+    passengerList : passengerList
+  }
+
+  if(localStorage.getItem("travelInfos") != null){
+    let previous = localStorage.getItem("travelInfos");
+    listOfAllData = JSON.parse(previous);
+    console.log("enter")
+  }
+  console.log(travelInformation)
+  listOfAllData.push(travelInformation);
+  let json = JSON.stringify(listOfAllData);
   console.log(json)
-  localStorage.setItem("passengerInfos",json);
+  localStorage.setItem("travelInfos",json);
   window.location = '../app/home.html'
   alert("خرید بلیط با موفقیت انجام شد.")
 }
