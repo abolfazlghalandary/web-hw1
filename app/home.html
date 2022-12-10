@@ -12,20 +12,16 @@
 
   <meta name="theme-color" content="#fafafa">
 
-    <title>بلیط فروشی خسرو</title>
-    <link href="../img/Khosro-dark.png" rel="icon">
+  <title>بلیط فروشی خسرو</title>
+  <link href="../img/Khosro-dark.png" rel="icon">
 
-    <link href="../css/style.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.3/dist/css/bootstrap-dark.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/numberInput.css">
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/formStyle.css">
-    <link rel="stylesheet" href="../css/homeStyle.css">
-
-  <!--  bootstrap-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.3/dist/css/bootstrap-dark.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/numberInput.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/formStyle.css">
+  <link rel="stylesheet" href="../css/homeStyle.css">
 
   <!--  persian datepicker-->
   <link href="../css/persianDatePicker/mds.bs.datetimepicker.style.css" rel="stylesheet"/>
@@ -33,17 +29,26 @@
   <!--  jquery-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-    <meta name="theme-color" content="#111111" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#eeeeee" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#111111" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#eeeeee" media="(prefers-color-scheme: dark)">
 </head>
 
 
 <body>
 <!--navigation bar-->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
-    <img src="../img/logo.jpg" style="max-width: 90px;" alt="خسرو">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="home.html" class="logo d-flex align-items-center">
+        <picture>
+          <source srcset="../img/Khosro-dark.png" media="(prefers-color-scheme:dark)">
+          <img src="../img/Khosro.png" alt="خسرو">
+        </picture>
+        <span class="d-none d-lg-block p-2">خسرو</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -51,10 +56,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">خانه</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">تماس با ما</a>
+          <a class="nav-link active" aria-current="page" href="#about">درباره خسرو</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -71,7 +73,10 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">دریافت امتیاز</a>
+          <a class="nav-link" href="#FAQ" tabindex="-1">سوالات متداول</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Staff">بنیان گذاران</a>
         </li>
       </ul>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -88,251 +93,252 @@
 
 
 <main id="main" class="main">
-<div id="booking" class="section">
-  <div class="section-center">
-    <div class="container">
-      <div class="row">
-        <div class="booking-form">
-          <form action="flight-selection.html">
-            <div class="row">
-              <div class="form-group col-md-2">
-                <span class="form-label">مبدأ</span>
-                <input list="fromCities" id="from" name="source" class="form-control" autocomplete="off">
-                <datalist id="fromCities"></datalist>
-              </div>
-              <div class="form-group col-md-2">
-                <span class="form-label">مقصد</span>
-                <input list="toCities" id="to" name="destination" class="form-control" autocomplete="off">
-                <datalist id="toCities"></datalist>
-              </div>
-              <div class="col-md-2 form-group">
-                <span class="form-label">تاریخ رفت</span>
-                <span id="dtp1" class="cursor-pointer" data-mds-dtp-guid="166d60f0-7f3b-49be-bcf8-8f9361736d75"
-                      data-bs-original-title="" title="" data-mds-dtp-group="group1" data-from-date="true">
+  <div id="booking" class="section">
+    <div class="section-center">
+      <div class="container">
+        <div class="row">
+          <div class="booking-form">
+            <form action="flight-selection.html">
+              <div class="row">
+                <div class="form-group col-md-2">
+                  <span class="form-label">مبدأ</span>
+                  <input list="fromCities" id="from" name="source" class="form-control" autocomplete="off">
+                  <datalist id="fromCities"></datalist>
+                </div>
+                <div class="form-group col-md-2">
+                  <span class="form-label">مقصد</span>
+                  <input list="toCities" id="to" name="destination" class="form-control" autocomplete="off">
+                  <datalist id="toCities"></datalist>
+                </div>
+                <div class="col-md-2 form-group">
+                  <span class="form-label">تاریخ رفت</span>
+                  <span id="dtp1" class="cursor-pointer" data-mds-dtp-guid="166d60f0-7f3b-49be-bcf8-8f9361736d75"
+                        data-bs-original-title="" title="" data-mds-dtp-group="group1" data-from-date="true">
                   <input type="text" name="departDate" data-name="dtp1-text" class="form-control">
                 </span>
-              </div>
-              <div class="col-md-2 form-group">
-                <span class="form-label">تاریخ برگشت</span>
-                <span id="dtp2" class="cursor-pointer" data-mds-dtp-guid="f7ffbe01-5635-4f73-b722-b624dd83b61a"
-                      data-bs-original-title="" title="" data-mds-dtp-group="group1" data-to-date="true">
+                </div>
+                <div class="col-md-2 form-group">
+                  <span class="form-label">تاریخ برگشت</span>
+                  <span id="dtp2" class="cursor-pointer" data-mds-dtp-guid="f7ffbe01-5635-4f73-b722-b624dd83b61a"
+                        data-bs-original-title="" title="" data-mds-dtp-group="group1" data-to-date="true">
                   <input type="text" name="returnDate" data-name="dtp2-text" class="form-control">
                 </span>
-              </div>
-              <div class="col-md-2 form-group">
-                <span class="form-label ">تعداد مسافران</span>
-                <div class="outer form-control">
-                  <button type="button" id="sub" class="left form-btn" onclick="decrease()">-</button>
-                  <input style="text-align: center" id="numberOfPassengers" type="text" value="1"
-                         class="middle form-text" pattern="[0-9]"/>
-                  <button type="button" id="add" class="right form-btn" onclick="increase()">+</button>
                 </div>
-              </div>
-              <div class="col-md-2">
-                <div class="form-btn">
-                  <button class="submit-btn">جستجوی بلیط</button>
+                <div class="col-md-2 form-group">
+                  <span class="form-label">تعداد مسافران</span>
+                  <div class="outer form-control">
+                    <button type="button" id="sub" class="left form-btn btn btn-secondary" onclick="decrease()">-</button>
+                    <input style="text-align: center" id="numberOfPassengers" type="text" value="1"
+                           class="middle form-text" pattern="[0-9]" name="passengers"/>
+                    <button type="button" id="add" class="right form-btn btn btn-secondary" onclick="increase()">+</button>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div style="height: 20vh"></div>
-    <section class="hero-caption secPadding">
-      <div class="container">
-        <div class="row " style="margin-top: 0px;">
-          <div class="col-sm-12">
-            <h2>به
-              <strong>خسرو</strong>
-              خوش آمده اید
-            </h2>
-            <p>
-              خرید بلیط هواپیما بهترین و راحت‌ترین انتخاب پیش‌روی شما برای سفر با هواپیماست! در سفر با هواپیما
-              می‌توانید در کوتاه‌ترین زمان ممکن به جای‌جای دنیا سفر کنید و از چشم‌انداز بی‌‌نظیر شهرها بر فراز
-              آسمان‌ها لذت ببرید. خرید بلیط هواپیما خارجی و داخلی یکی از پر متقاضی‌ترین انواع بلیط هواپیما در سایت
-              گردشگری خسرو است که بهترین تجربه سفر هوایی را برایتان رقم خواهد زد. خسرو یکی از بهترین و معتبرترین
-              سایت‌های خرید اینترنتی بلیط هواپیما است که در طول سال‌های فعالیتش با ارائه بهترین خدمات و ارزان‌ترین
-              قیمت‌ها، توانسته رضایت کاربران را جلب کرده و بر شمار مشتریان وفادارش بیافزاید. شما می‌توانید برای
-              خرید بلیط هواپیما در هرکجای ایران و جهان که هستید، تنها به شرط دسترسی به اینترنت، در سایت و اپلیکیشن
-              خسرو بلیط هواپیما در مسیر دلخواه‌تان را جست‌وجو و با مقایسه قیمت بلیط‌ها، بهترین بلیط را رزرو کنید و
-              درصورتی‌که هرجای فرآیند رزرو بلیط هواپیما با سوال یا مشکلی مواجه شدید، از طریق تماس با پشتیبانی خسرو
-              (1548☎) مشکل خود را برطرف کنید. رزرو بلیط هواپیما داخلی و خارجی سفرتان را به ما بسپارید و با خسرو
-              همسفر شوید.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="DescSection pink-bg">
-      <div class="container">
-        <h1 id="services" class="title text-center">خدمات</h1>
-        <div class="space"></div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="media block-list">
-              <div class="media-body">
-                <h3 class="media-heading">
-                  <i class="fa fa-trophy"></i>
-                  افتخارات
-                </h3>
-                <blockquote>
-                  <p>
-                    خسرو بهترین سایت فروش بلیط هواپیما در سال های اخیر است.
-                  </p>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="media block-list">
-              <div class="media-body">
-                <h3 class="media-heading">
-                  <i class="fa fa-heart"></i>
-                  کیفیت
-                </h3>
-                <blockquote>
-                  <p>خسرو بهترین بلیط ها در سطح دنیا را می فروشد.</p>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="media block-list">
-              <div class="media-body">
-                <h3 class="media-heading">
-                  <i class="fa fa-laptop"></i>
-                  خدمات الکترونیک
-                </h3>
-                <blockquote>
-                  <p>خسرو یک سایت است که این نهایت خدمات الکترونیک است</p>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="DescSection">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h1 id="about" class="title text-center">درباره <span>خسرو</span></h1>
-            <p class="lead text-center">
-              هر کسی که از خسرو بلیط خریده است دیگر نتوانسته که از شرکت دیگری بلیط بخرد.
-            </p>
-            <div class="space"></div>
-            <div class="row">
-              <div class="col-md-6">
-                <img src="../img/banner.jpg" alt="">
-                <div class="space"></div>
-              </div>
-              <div class="col-md-6">
-                <p>
-                  خسرو بهترین بلیط فروش جهان است و اگر شک دارید خلاف آن را اثبات کنید.
-                </p>
-                <p>
-                  اگر حداقل یک بلیط یافتید که در شرکتی از خسرو ارزان فروخته شود می توانید آن را بخرید.
-                </p>
-                <p>
-                  از ویژگی های خسرو برایتان بگویم
-                </p>
-                <ul class="list-unstyled">
-                  <li>
-                    <i class="fa fa-arrow-circle-right pr-10 colored"></i> خسرو اعتیاد آور است.
-                  </li>
-                  <li>
-                    <i class="fa fa-arrow-circle-right pr-10 colored"></i> خسرو خوب است.
-                  </li>
-                  <li><i class="fa fa-arrow-circle-right pr-10 colored"></i>خسرو بزرگتر است.
-                  </li>
-                  <li><i class="fa fa-arrow-circle-right pr-10 colored"></i> خسرو خسرو است.
-                  </li>
-                  <li><i class="fa fa-arrow-circle-right pr-10 colored"></i> صدای خسرو در جهان طنین انداز است.
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="space"></div>
-
-            <h2 class="text-center">سوالات متدوال در مورد خسرو</h2>
-            <div class="accordion" id="accordionExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                          aria-expanded="true" aria-controls="collapseOne">
-                    خسرو کیست؟
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                     data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                     پادشاه بلیط فروشان خاورمیانه
+                <div class="col-md-2">
+                  <div class="form-btn">
+                    <button class="submit-btn">جستجوی بلیط</button>
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                          data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    چرا از خسرو خرید کنیم؟
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                     data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    چرا خرید نکنیم؟
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                          data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    چرا نباید از خسرو خرید نکنیم؟
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                     data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    چون پشیمان نمی شوید.
-                  </div>
-                </div>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
-    </section>
-
-    <footer id="footer">
-      <div class="footer DescSection">
+      <div style="height: 20vh"></div>
+      <section class="hero-caption secPadding">
         <div class="container">
-          <h1 class="title text-center" id="contact">با خرید از خسرو پشیمان نخواهید شد</h1>
-          <div class="row">
-            <h4>بنیان گذاران خسرو</h4><br/>
-            <div class="row">
-              <dl>
-                <dt>محمد خلفی</dt>
-                <dd>99105418</dd>
-                <dt>علیرضا فرشی</dt>
-                <dd>99101976</dd>
-                <dt>ابوالفضل قلندری</dt>
-                <dd>99102026</dd>
-              </dl>
+          <div class="row " style="margin-top: 0px;">
+            <div class="col-sm-12">
+              <h2>به
+                <strong>خسرو</strong>
+                خوش آمدید
+              </h2>
+              <p>
+                خرید بلیط هواپیما بهترین و راحت‌ترین انتخاب پیش‌روی شما برای سفر با هواپیماست! در سفر با هواپیما
+                می‌توانید در کوتاه‌ترین زمان ممکن به جای‌جای دنیا سفر کنید و از چشم‌انداز بی‌‌نظیر شهرها بر فراز
+                آسمان‌ها لذت ببرید. خرید بلیط هواپیما خارجی و داخلی یکی از پر متقاضی‌ترین انواع بلیط هواپیما در سایت
+                گردشگری خسرو است که بهترین تجربه سفر هوایی را برایتان رقم خواهد زد. خسرو یکی از بهترین و معتبرترین
+                سایت‌های خرید اینترنتی بلیط هواپیما است که در طول سال‌های فعالیتش با ارائه بهترین خدمات و ارزان‌ترین
+                قیمت‌ها، توانسته رضایت کاربران را جلب کرده و بر شمار مشتریان وفادارش بیافزاید. شما می‌توانید برای
+                خرید بلیط هواپیما در هرکجای ایران و جهان که هستید، تنها به شرط دسترسی به اینترنت، در سایت و اپلیکیشن
+                خسرو بلیط هواپیما در مسیر دلخواه‌تان را جست‌وجو و با مقایسه قیمت بلیط‌ها، بهترین بلیط را رزرو کنید و
+                درصورتی‌که هرجای فرآیند رزرو بلیط هواپیما با سوال یا مشکلی مواجه شدید، از طریق تماس با پشتیبانی خسرو
+                (1548☎) مشکل خود را برطرف کنید. رزرو بلیط هواپیما داخلی و خارجی سفرتان را به ما بسپارید و با خسرو
+                همسفر شوید.
+              </p>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </section>
+
+      <section class="DescSection pink-bg">
+        <div class="container">
+          <h1 id="services" class="title text-center">خدمات</h1>
+          <div class="space"></div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="media block-list">
+                <div class="media-body">
+                  <h3 class="media-heading">
+                    <i class="fa fa-trophy"></i>
+                    افتخارات
+                  </h3>
+                  <blockquote>
+                    <p>
+                      خسرو بهترین سایت فروش بلیط هواپیما در سال های اخیر است.
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="media block-list">
+                <div class="media-body">
+                  <h3 class="media-heading">
+                    <i class="fa fa-heart"></i>
+                    کیفیت
+                  </h3>
+                  <blockquote>
+                    <p>خسرو بهترین بلیط ها در سطح دنیا را می فروشد.</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="media block-list">
+                <div class="media-body">
+                  <h3 class="media-heading">
+                    <i class="fa fa-laptop"></i>
+                    خدمات الکترونیک
+                  </h3>
+                  <blockquote>
+                    <p>خسرو یک سایت است که این نهایت خدمات الکترونیک است</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="DescSection">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 id="about" class="title text-center">درباره <span>خسرو</span></h1>
+              <p class="lead text-center">
+                هر کسی که از خسرو بلیط خریده است دیگر نتوانسته که از شرکت دیگری بلیط بخرد.
+              </p>
+              <div class="space"></div>
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="../img/banner.jpg" alt="">
+                  <div class="space"></div>
+                </div>
+                <div class="col-md-6">
+                  <p>
+                    خسرو بهترین بلیط فروش جهان است و اگر شک دارید خلاف آن را اثبات کنید.
+                  </p>
+                  <p>
+                    اگر حداقل یک بلیط یافتید که در شرکتی از خسرو ارزان فروخته شود می توانید آن را بخرید.
+                  </p>
+                  <p>
+                    از ویژگی های خسرو برایتان بگویم
+                  </p>
+                  <ul class="list-unstyled">
+                    <li>
+                      <i class="fa fa-arrow-circle-right pr-10 colored"></i> خسرو اعتیاد آور است.
+                    </li>
+                    <li>
+                      <i class="fa fa-arrow-circle-right pr-10 colored"></i> خسرو خوب است.
+                    </li>
+                    <li><i class="fa fa-arrow-circle-right pr-10 colored"></i>خسرو بزرگتر است.
+                    </li>
+                    <li><i class="fa fa-arrow-circle-right pr-10 colored"></i> خسرو خسرو است.
+                    </li>
+                    <li><i class="fa fa-arrow-circle-right pr-10 colored"></i> صدای خسرو در جهان طنین انداز است.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="space"></div>
+
+              <h2 class="text-center" id="FAQ">سوالات متدوال در مورد خسرو</h2>
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                      خسرو کیست؟
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                       data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      پادشاه بلیط فروشان خاورمیانه
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      چرا از خسرو خرید کنیم؟
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                       data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      چرا خرید نکنیم؟
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      چرا نباید از خسرو خرید نکنیم؟
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                       data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      چون پشیمان نمی شوید.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer">
+        <div class="footer DescSection" id="Staff">
+          <div class="container">
+            <h1 class="title text-center" id="contact">با خرید از خسرو پشیمان نخواهید شد</h1>
+            <div class="row">
+              <h4>بنیان گذاران خسرو</h4><br/>
+              <div class="row">
+                <dl>
+                  <dt>محمد خلفی</dt>
+                  <dd>99105418</dd>
+                  <dt>علیرضا فرشی</dt>
+                  <dd>99101976</dd>
+                  <dt>ابوالفضل قلندری</dt>
+                  <dd>99102026</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
   </div>
-</div>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
