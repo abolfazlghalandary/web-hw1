@@ -39,17 +39,29 @@ function saveInformation(){
     let informationOfPassenger = {
       lastname : lastName,
       firstName : firstName,
-      passportNumber : passportNumber,
-      startTime : startTime,
-      endTime: endTime,
-      source : source,
-      destination : destination
+      passportNumber : passportNumber
     };
     passengerList.push(informationOfPassenger);
   }
-  let json = JSON.stringify(passengerList);
+  let listOfAllData = [];
+  let travelInformation = {
+    startTime : startTime,
+    endTime : endTime,
+    source : source,
+    destination : destination,
+    passengerList : passengerList
+  }
+
+  if(localStorage.getItem("travelInfos") != null){
+    let previous = localStorage.getItem("travelInfos");
+    listOfAllData = JSON.parse(previous);
+    console.log("enter")
+  }
+  console.log(travelInformation)
+  listOfAllData.push(travelInformation);
+  let json = JSON.stringify(listOfAllData);
   console.log(json)
-  localStorage.setItem("passengerInfos",json);
+  localStorage.setItem("travelInfos",json);
   window.location = '../app/home.html'
   alert("خرید بلیط با موفقیت انجام شد.")
 }
@@ -63,4 +75,14 @@ document.querySelector("#destination").innerText = ticketInfo.ticketInfo.destina
 document.querySelector("#source").innerText = ticketInfo.ticketInfo.sourceLocation;
 
 
-console.log(sessionStorage.getItem("buyingTicket"));
+let ticket = sessionStorage.getItem('buyingTicket');
+let ticketObject = JSON.parse(ticket);
+let numberOfPassengers = ticketObject.ticketInfo.passengersCount;
+let original = document.getElementById('passenger_0');
+let passengerSection = document.getElementById('passengerSection');
+for(let i = 1; i < numberOfPassengers; i++){
+  let copy = original.cloneNode(true);
+  copy.id = 'passenger_' + i;
+  passengerSection.appendChild(copy);
+}
+
