@@ -57,57 +57,52 @@
     </div>
   </div>
   <div id="tickets" class="container-fluid col text-center">
-    <template>
+    <div>
       <div id="ticketTemplate" class="card">
-        <div class="row align-items-center">
-          <div class="col-sm-2">
-            <img src="../img/mahan.png" style="max-width: 3em" class="card-img-center" alt="Mahan logo">
-            <h6 id="class">اقتصادی</h6>
-          </div>
-          <div class="col-sm-7 align-items-center">
-            <div class="card-body">
-              <div class="row">
-                <div class="col">
-                  <h5 id="flightSource" class="card-title">تهران</h5>
-                </div>
-                <div class="col">
-                  <h4 id="flightTime" class="card-title">10:00</h4>
-                  <h6 id="sourceAirport" class="card-title ">mehrabad</h6>
-                </div>
-                <div class="col">
-                  >
-                  <text id="duration">2h</text>
-                  >
-                </div>
-                <div class="col">
-                  <h5 id="flightDestination" class="card-title">مشهد</h5>
-                </div>
-                <div class="col">
-                  <h4 id="endTime" class="card-title">12:00</h4>
-                  <h6 id="destinationAirport" class="card-title ">shahid</h6>
+        <div class="col">
+          <div class="row align-items-center">
+            <div class="col-sm-2">
+              <img src="../img/mahan.png" style="max-width: 3em" class="card-img-center" alt="Mahan logo">
+            </div>
+            <div class="col-sm-7 align-items-center">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 id="flightSource" class="card-title">تهران</h5>
+                  </div>
+                  <div class="col">
+                    <h4 id="flightTime" class="card-title">10:00</h4>
+                  </div>
+                  <div class="col">
+                    <h5 id="flightDestination" class="card-title">مشهد</h5>
+                  </div>
+                  <div class="col">
+                    <h4 id="endTime" class="card-title">12:00</h4>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-sm-2 d-sm-flex">
-            <a id="price" class="btn btn-primary col p-3 m-3">10,000,000 تومان</a>
-            <small id="limited" class="alert alert-danger col p-3 m-3" role="alert">ظرفیت محدود</small>
+          <div class="row">
+            <div class="list-group" id="passengers">
+            </div>
           </div>
         </div>
       </div>
-    </template>
+    </div>
     <template id="notFound">
       <h1 class="alert alert-heading alert-warning">
         هیچ پروازی با این ظرفیت پیدا نشد!
       </h1>
     </template>
+    <template id="passengerSample">
+      <div class="list-group-item list-group-item-action">
+        <h6 id="con"></h6>
+      </div>
+    </template>
   </div>
 </main>
-<script src="../js/persianDatePicker/mds.bs.datetimepicker.js"></script>
-<script src="../js/persianDatePicker/dtpDefiner.js"></script>
 <script src="../js/data.js"></script>
-<script src="../js/main.js"></script>
-<script src="../js/ticketCardCreator.js"></script>
-<script src="../js/ticketRetrieve.js"></script>
+<script src="../js/profile.js"></script>
 </body>
 </html>
